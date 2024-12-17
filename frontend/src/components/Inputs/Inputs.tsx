@@ -12,17 +12,18 @@ const Input = () => {
   const [isModalOpen, setIsModalOpen] = useState(false); 
   const [currentRow, setCurrentRow] = useState(null)
 
-  useEffect(() => {
-    const fetchInitialData = async () => {
-      try {
-        const data = await fetchData();
-        setNewRowTable(data.expenses);
-      } catch (error) {
-        console.error('Erro ao buscar dados:', error);
-      }
-    };
+  const fetchInitialData = async () => {
+    try {
+      const data = await fetchData();
+      setNewRowTable(data.expenses);
+    } catch (error) {
+      console.error('Erro ao buscar dados:', error);
+    }
+  };
 
-    fetchInitialData();
+  useEffect(() => {
+
+     fetchInitialData();
   }, []);
 
   const handleCreateRowTable = async () => {
@@ -34,7 +35,7 @@ const Input = () => {
     const newExpense = { name, date, amount };
 
     await saveExpense(newExpense);
-
+    fetchInitialData()
     setName('');
     setDate('');
     setAmount('');
@@ -43,7 +44,7 @@ const Input = () => {
   const handleDeleteRow = (id:any) => {
 
     deleteExpense(id)
-
+    fetchInitialData()
   };
 
   const handleEditRow = (id:any,newRow:any) =>{
@@ -55,7 +56,7 @@ const Input = () => {
   const handleUpdateRow = (updatedRow:any)=>{
 
     editExpense(updatedRow)
-
+    fetchInitialData()
   }
 
   return (
