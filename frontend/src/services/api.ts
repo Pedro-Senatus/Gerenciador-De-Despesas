@@ -3,10 +3,6 @@ import { Expenses } from "../types/Expenses";
 
 const API_URL = import.meta.env.VITE_API_URL; 
 
-if (!API_URL) {
-    throw new Error("REACT_APP_API_URL não está configurada.");
-}
-
 export const fetchData = async () =>{
 
     const response = await axios.get(API_URL)
