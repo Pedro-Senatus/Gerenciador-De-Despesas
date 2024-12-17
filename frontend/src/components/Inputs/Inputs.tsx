@@ -23,7 +23,7 @@ const Input = () => {
     };
 
     fetchInitialData();
-  }, [newRowTable]);
+  }, []);
 
   const handleCreateRowTable = async () => {
     if (!name || !date || !amount) {
