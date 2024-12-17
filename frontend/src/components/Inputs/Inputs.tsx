@@ -35,16 +35,16 @@ const Input = () => {
     const newExpense = { name, date, amount };
 
     await saveExpense(newExpense);
-    fetchInitialData()
+    await fetchInitialData()
     setName('');
     setDate('');
     setAmount('');
   };
 
-  const handleDeleteRow = (id:any) => {
+  const handleDeleteRow = async (id:any) => {
 
-    deleteExpense(id)
-    fetchInitialData()
+    await deleteExpense(id)
+    await fetchInitialData()
   };
 
   const handleEditRow = (id:any,newRow:any) =>{
@@ -53,10 +53,10 @@ const Input = () => {
     setIsModalOpen(true)
   }
 
-  const handleUpdateRow = (updatedRow:any)=>{
+  const handleUpdateRow = async (updatedRow:any)=>{
 
-    editExpense(updatedRow)
-    fetchInitialData()
+    await editExpense(updatedRow)
+    await fetchInitialData()
   }
 
   return (
