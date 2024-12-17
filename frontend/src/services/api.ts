@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Expenses } from "../types/Expenses";
 
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:3000"; 
+const API_URL = 'https://gerenciador-de-despesas-production.up.railway.app/expenses'; 
 
 export const fetchData = async () =>{
 
