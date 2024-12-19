@@ -60,7 +60,7 @@ const Input = () => {
   }
 
   return (
-    <>
+    <div>
       <Cointainer>
         <InputContainer>
           <label>Nome</label>
@@ -80,7 +80,7 @@ const Input = () => {
       <Table rows={newRowTable} deleteRow={handleDeleteRow} editRow={handleEditRow} />
 
       {isModalOpen?<Modal  row={currentRow} onSave={handleUpdateRow} onClose={()=>{setIsModalOpen(false)}}/>: null}
-    </>
+    </div>
   );
 };
 

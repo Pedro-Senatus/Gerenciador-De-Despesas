@@ -28,7 +28,12 @@ export const InputContainer = styled.div`
     input[type="number"]::-webkit-inner-spin-button, 
     input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; } 
 
-    
+    @media (max-width: 533px){
+
+        input{
+            width: 38vh;
+        } 
+    }
 
 `
 
@@ -38,7 +43,8 @@ export const Cointainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 5vh;
-    gap: 4rem;
+    flex-wrap: wrap;
+    column-gap: 4rem;
 
     button{
         margin-top: 28px;
