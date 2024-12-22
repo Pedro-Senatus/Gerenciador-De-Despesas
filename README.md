@@ -4,4 +4,4 @@ Desenvolvi um gerenciador de despesas que incorpora conceitos avançados de mét
 
 O deploy do front-end foi realizado na Vercel, garantindo alta performance e facilidade de integração contínua. Já o back-end foi implantado na Railway, assegurando uma infraestrutura robusta e confiável.
 
-URL: https://gerenciador-de-despesas-8fvje885v-pedro-senatus-projects.vercel.app/
+URL: https://gerenciador-de-despesas-six.vercel.app/
